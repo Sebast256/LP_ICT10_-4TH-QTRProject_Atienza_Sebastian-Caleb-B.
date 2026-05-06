@@ -1,11 +1,11 @@
 from pyscript import document, display
-import numpy as ___
+import numpy as np
 
 # Suppress matplotlib font logs
 import logging
-logging.getLogger('________').setLevel(logging.ERROR)
+logging.getLogger('matplotlib').setLevel(logging.ERROR)
 
-import matplotlib.pyplot as ____
+import matplotlib.pyplot as plt
 
 # Preload to avoid font cache message
 plt.figure()
@@ -17,20 +17,24 @@ days = []
 absences = []
 
 def displaying(e):
-day = document.getElementById('______').value
-absence = int(document.getElementById('_______').value)
+day = document.getElementById('day').value
+absence = int(document.getElementById('abscence').value)
 
 # Save data
-days.________(day)
+days.append(day)
 absences.append(absence)
 
 # Convert to NumPy array
-converted_absences = __________(absences)
+converted_absences = np.array(absences)
 
 # Clear previous plot
 plt.clf()
 
 # Create graph
-________(days, converted_absences, marker='o')
+plt.plot(days, converted_absences, marker='o')
 plt.title("Weekly Attendance (Absences)")
-________("Day")
+plt.xlabel("Day")
+plt.ylabel("Number of Absences")
+plt.grid()
+# Display plot
+plt.show()
