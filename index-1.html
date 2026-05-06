@@ -126,7 +126,7 @@ function showList() {
 
     classmates.forEach(c => {
         let li = document.createElement("li");
-        li.textContent = $(c.name) - $(c.section) - $(c.subject);
+        li.textContent = `${c.name} - ${c.section} - ${c.subject}`;
         list.appendChild(li);
     });
 }
