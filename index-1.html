@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      body{
+        background-color: #50C878;
+        font-family: 'Copperplate';
+    }
+      
+      .container{
+        border: 2px solid;
+        padding: 20px;
+        height: 500 px;
+        width: 750px;
+        border-radius: 10px;
+        background-color: aqua;
+        margin: auto;
+     } 
+     
+     input{
+        display: block;
+        padding: 20px;
+        width: 700px;
+        border-radius: 10px;
+        background-color: #6FD1D7;
+        margin: auto;
+     } 
+
+     button{
+        margin: 5px;
+        padding: 10px;
+        cursor: pointer;
+     }
+
+     ul{
+        margin-top: 20px;
+     }
+
+    .navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex; /* Align items horizontally */
+  background-color: #6FD1D7;
+}
+
+    .navbar li a {
+  display: block;
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+    
+    </style>
+    
+    <title>Grade 10 Classmates System</title>
+    
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+    <div>
+            <a class="navbar-brand">Emerald Alumni 2026</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="attendance.html">Attendance Tracker</a>
+                </li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+
+    <br>
+
+    <br>
+
+    <br>
+
+    <br>
+
+    <div class="container">
+    <h1>Grade 10 Classmates System</h1>
+
+    <label>Name:</label>
+    <input type="text" id="name">
+    <br>
+    <label>Section:</label>
+    <input type="text" id="section">
+    <br>
+    <label>Favorite subject:</label>
+    <input type="text" id="subject">
+
+    <button onclick="addClassmate()">Add Classmate</button>
+    <button onclick="showList()">Show List</button>
+
+    <ul id="list"></ul>
+</div>
+
+<script>
+let classmates = [];
+
+function addClassmate() {
+    let name = document.getElementById("name").value;
+    let section = document.getElementById("section").value;
+    let subject = document.getElementById("subject").value;
+
+    classmates.push({name, section, subject});
+
+    alert("Classmate added!");
+}
+
+function showList() {
+    let list = document.getElementById("list");
+    list.innerHTML = "";
+
+    classmates.forEach(c => {
+        let li = document.createElement("li");
+        li.textContent = $(c.name) - $(c.section) - $(c.subject);
+        list.appendChild(li);
+    });
+}
+</script>
+
+
+</div>
+
+
+
+
+
+</body>
+</html>

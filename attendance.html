@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-color: #50C878;
+            font-family: 'Copperplate';
+            justify-content: center;
+            margin-top: 50px;
+        }
+
+        .container {
+            border: 15px solid powderblue;
+            padding: 150px;
+            width: 500px;
+            text-align: center;
+            border-radius: 10px;
+            background-color: aqua;
+            margin: auto;
+            height: 1000 px;
+        }
+
+        button{
+        margin: 5px;
+        padding: 10px;
+        cursor: pointer;
+     }
+
+      .navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex; 
+  background-color: #6FD1D7;
+}
+
+    .navbar li a {
+  display: block;
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+     </style>
+    <title>Attendance Tracker</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+        <div>
+            <a class="navbar-brand">Emerald Alumni 2026</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="attendance.html">Attendance Tracker</a>
+                </li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div>
+        <h1>Attendance Tracker</h1>
+        <div class= container>
+        <label>Select Day:</label>
+        <select name="day">
+            <option value="Monday">Monday</option>
+            <option value="Tuesday">Tuesday</option>
+            <option value="Wednesday">Wednesday</option>
+            <option value="Thursday">Thursday</option>
+            <option value="Friday">Friday</option>
+        </select>
+
+        <br>
+        <br>
+
+        <label>Abscences:</label>
+        <input type="number" name="abscences" required>
+
+        <button type="submit">Submit</button>
+    </div>
+    
+</body>
+</html>
